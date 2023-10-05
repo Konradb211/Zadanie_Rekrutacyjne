@@ -24,19 +24,30 @@ body {
 	max-width: 1200px;
 }
 
+//title
+.title {
+	padding: 0 0.8rem 0 0.8rem;
+	font-size: 1.75rem;
+	line-height: 2.1875rem;
+	text-transform: uppercase;
+	text-align: left;
+	font-weight: bold;
+	width: 100%;
+}
+
 //Header
 .header {
 	position: fixed;
 	width: 100%;
+	z-index: 10;
+
 	&__container {
 		background-color: $primary-color;
-		z-index: 100;
 		.wrapper {
-			padding: 0.7rem 1rem;
+			padding: 0.7rem 0.8rem;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			z-index: 100;
 
 			img {
 				width: 8rem;
@@ -80,9 +91,295 @@ body {
 	display: none;
 }
 
+//MAIN
+.section2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 5rem;
+	background-color: $background;
+	width: 100%;
+	overflow: hidden;
+
+	&__ul {
+		text-align: left;
+		width: 100%;
+		padding: 0 0 1rem 1.8rem;
+
+		&__list {
+			text-transform: uppercase;
+			color: $primary-color;
+			font-size: 0.9375rem;
+			font-weight: 200;
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0.5rem 0.5rem 1.3rem 0.5rem;
+		button {
+			background-color: $primary-color;
+			color: $white;
+			border: none;
+			border-radius: 5px;
+			text-transform: uppercase;
+			font-size: 1rem;
+			padding: 1rem 1.4rem;
+			cursor: pointer;
+		}
+		span {
+			padding-left: 0.5rem;
+			color: $primary-color;
+			font-size: 1.1rem;
+			cursor: pointer;
+		}
+	}
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.8rem;
+		flex-wrap: wrap;
+
+		.containert-wrapper {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+		&__card {
+			position: relative;
+			box-shadow: 0px 0px 50px -31px rgba(66, 68, 90, 1);
+
+			&:hover img {
+				filter: brightness(70%);
+			}
+
+			img {
+				width: 100%;
+				border-radius: 5px;
+				aspect-ratio: 1.6;
+				object-fit: cover;
+				transition: filter 0.3s;
+			}
+			&__text {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				text-align: left;
+				padding: 0.9rem;
+				text-transform: uppercase;
+				background-color: $white;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+		}
+	}
+}
+
+.section4 {
+	.title {
+		padding: 0 0.8rem 0 0.8rem;
+		font-size: 1.75rem;
+		line-height: 2.1875rem;
+		text-transform: uppercase;
+		text-align: left;
+		font-weight: bold;
+		width: 100%;
+	}
+	&__ul {
+		text-align: left;
+		width: 100%;
+		padding: 0 0 1rem 1.8rem;
+
+		&__list {
+			text-transform: uppercase;
+			color: $primary-color;
+			font-size: 0.9375rem;
+			font-weight: 200;
+		}
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		&__cardBox {
+			display: flex;
+			justify-content: center;
+			background-color: $white;
+			margin: 1rem 1rem 0 1rem;
+			border-radius: 5px;
+			box-shadow: 0px 0px 22px -7px rgba(66, 68, 90, 1);
+			.desktop {
+				display: none;
+			}
+
+			&__card {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				max-width: 328px;
+
+				.date {
+					color: $border-color;
+					width: 100%;
+					text-align: right;
+					padding: 0 1rem 0.5rem 0;
+				}
+
+				&__img {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					img {
+						width: 100%;
+						object-fit: cover;
+						border-top-left-radius: 5px;
+						border-top-right-radius: 5px;
+					}
+				}
+				&__text {
+					border-top: 4px solid $primary-color;
+					padding: 1rem 1rem 0.1rem 1rem;
+					letter-spacing: 2%;
+
+					&__title {
+						text-transform: uppercase;
+						font-weight: 400;
+						font-size: 1.125rem;
+						line-height: 1.6rem;
+						color: $primary-color;
+					}
+					&__longText {
+						font-size: 0.75rem;
+						padding: 1.25rem 0 1.25rem 0;
+						font-weight: 300;
+					}
+					&__button {
+						display: flex;
+						align-items: center;
+						gap: 1rem;
+						padding-top: 0.5rem;
+						button {
+							border: 2px solid $border-color;
+							text-transform: uppercase;
+							padding: 0.8rem 1.6rem;
+							border-radius: 5px;
+							background-color: transparent;
+							cursor: pointer;
+						}
+						span {
+							color: $primary-color;
+							font-size: 1.3rem;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+		&__formContainer {
+			position: relative;
+			margin: 3rem 1rem 0 1rem;
+			&::before {
+				position: absolute;
+				content: "";
+				height: 1px;
+				background-color: $border-color;
+				width: 100%;
+				top: -1.5rem;
+			}
+
+			&__form {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				flex-direction: column;
+				border-radius: 5px;
+				padding: 0.9rem;
+				background-color: $white;
+				box-shadow: 0px 0px 22px -7px rgba(66, 68, 90, 1);
+
+				h2,
+				p {
+					text-align: center;
+					width: 100%;
+					margin-bottom: 1rem;
+					font-size: 0.9rem;
+				}
+
+				h2 {
+					font-size: 1.3rem;
+					text-transform: uppercase;
+					color: $primary-color;
+				}
+
+				.input {
+					width: 100%;
+					padding: 0.9rem 0.5rem;
+					margin-bottom: 1rem;
+					border: 1px solid $border-color;
+					border-radius: 5px;
+				}
+
+				.label {
+					font-size: 0.9rem;
+					font-weight: bold;
+					padding-bottom: 0.3rem;
+				}
+
+				&__checkbox {
+					display: flex;
+					gap: 0.7rem;
+
+					.checkboxInput {
+						border: 1px solid black;
+					}
+					span {
+						color: $primary-color;
+					}
+					label {
+						font-size: 0.9rem;
+					}
+				}
+				&__btnContainer {
+					display: flex;
+					align-items: center;
+					gap: 0.7rem;
+					width: 100%;
+					margin: 1.3rem 1rem 0.5rem 0;
+					&__btn {
+						background-color: $primary-color;
+						color: $white;
+						border: none;
+						border-radius: 5px;
+						text-transform: uppercase;
+						font-size: 1rem;
+						padding: 0.8rem 1.2rem;
+						cursor: pointer;
+					}
+					span {
+						cursor: pointer;
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+}
+
 //MEDIA
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
+	//HEADER
 	.header {
+		.wrapper {
+			padding: 0.7rem 1rem;
+		}
 		button {
 			display: none;
 		}
@@ -105,5 +402,266 @@ body {
 
 	.nav-mobile {
 		display: none;
+	}
+	//MAIN
+	.section2 {
+		&__btn {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0.5rem 0.5rem 1.3rem 0.5rem;
+			button {
+				padding: 0.7rem 1.2rem;
+				font-size: 0.9rem;
+				border-radius: 5px;
+				background-color: $primary-color;
+				color: $white;
+				border: none;
+				text-transform: uppercase;
+			}
+			span {
+				padding-left: 0.5rem;
+				color: $primary-color;
+				font-size: 1.4rem;
+			}
+		}
+
+		&__container {
+			width: 100%;
+			&__card {
+				width: 16.75rem;
+
+				img {
+					width: 100%;
+					border-radius: 5px;
+					aspect-ratio: 1;
+					object-fit: cover;
+				}
+				&__text {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					text-align: left;
+					padding: 0.9rem;
+					text-transform: uppercase;
+					background-color: $white;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.section4 {
+		margin-bottom: 5rem;
+		.title {
+			padding: 0 0.8rem 0 0.8rem;
+			font-size: 1.75rem;
+			line-height: 2.1875rem;
+			text-transform: uppercase;
+			text-align: left;
+			font-weight: bold;
+			width: 100%;
+		}
+		&__ul {
+			text-align: left;
+			width: 100%;
+			padding: 0 0 1rem 1.8rem;
+
+			&__list {
+				text-transform: uppercase;
+				color: $primary-color;
+				font-size: 0.9375rem;
+				font-weight: 200;
+			}
+		}
+		&__container {
+			display: flex;
+			align-items: flex-end;
+			flex-direction: row;
+			gap: 3rem;
+
+			.cardBox-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+			&__cardBox {
+				display: flex;
+				justify-content: flex-start;
+				background-color: $white;
+				margin: 1rem 1rem 0 1rem;
+				border-radius: 5px;
+				box-shadow: 0px 0px 22px -7px rgba(66, 68, 90, 1);
+				width: 40rem;
+				.desktop {
+					display: block;
+					align-items: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					object-fit: cover;
+					border-right: 4px solid $primary-color;
+				}
+
+				&__card {
+					display: flex;
+					justify-content: flex-end;
+					align-items: flex-end;
+					flex-direction: column;
+
+					.date {
+						display: flex;
+						justify-content: flex-end;
+						color: $border-color;
+						width: 100%;
+						text-align: right;
+						padding: 0 1rem 0.5rem 0;
+					}
+
+					&__img {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						img {
+							display: none;
+						}
+					}
+
+					&__text {
+						border-top: none;
+						padding: 1rem 1rem 0.1rem 1rem;
+						letter-spacing: 2%;
+						&__title {
+							text-transform: uppercase;
+							font-weight: 400;
+							font-size: 1.5rem;
+							line-height: 1.6rem;
+							color: $primary-color;
+						}
+						&__longText {
+							font-size: 0.75rem;
+							padding: 1.25rem 0 1.25rem 0;
+							font-weight: 300;
+						}
+						&__button {
+							display: flex;
+							align-items: center;
+							gap: 1rem;
+							padding-top: 0.5rem;
+							button {
+								border: 2px solid $border-color;
+								text-transform: uppercase;
+								padding: 0.8rem 1.6rem;
+								border-radius: 5px;
+								background-color: transparent;
+								cursor: pointer;
+							}
+							span {
+								color: $primary-color;
+								font-size: 1.3rem;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+			&__formContainer {
+				position: relative;
+				margin: 3rem 1rem 0 1rem;
+				&::before {
+					position: absolute;
+					content: "";
+					background-color: $border-color;
+					left: -40px;
+					top: 0;
+					width: 0;
+					height: 100%;
+					border-left: 1px solid $border-color;
+				}
+
+				&__form {
+					display: flex;
+					justify-content: center;
+					align-items: flex-start;
+					flex-direction: column;
+					border-radius: 5px;
+					padding: 0.9rem;
+					background-color: $white;
+					box-shadow: 0px 0px 22px -7px rgba(66, 68, 90, 1);
+					width: 400px;
+
+					h2,
+					p {
+						text-align: center;
+						width: 100%;
+						margin-bottom: 2.4rem;
+						font-size: 0.9rem;
+					}
+
+					h2 {
+						font-size: 1.5rem;
+						text-transform: uppercase;
+						color: $primary-color;
+						padding-top: 1rem;
+					}
+
+					.input {
+						width: 100%;
+						padding: 0.9rem 0.5rem;
+						margin-bottom: 2rem;
+						border: 1px solid $border-color;
+						border-radius: 5px;
+					}
+
+					.label {
+						font-size: 0.9rem;
+						font-weight: bold;
+						padding-bottom: 0.3rem;
+					}
+
+					&__checkbox {
+						display: flex;
+						gap: 0.7rem;
+
+						.checkboxInput {
+							border: 1px solid black;
+						}
+						span {
+							color: $primary-color;
+						}
+						label {
+							font-size: 0.9rem;
+						}
+					}
+					&__btnContainer {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						gap: 0.7rem;
+						width: 100%;
+						margin: 4rem 1rem 1.7rem 0;
+						&__btn {
+							background-color: $primary-color;
+							color: $white;
+							border: none;
+							border-radius: 5px;
+							text-transform: uppercase;
+							font-size: 1.1rem;
+							padding: 1rem 1.4rem;
+							cursor: pointer;
+						}
+						span {
+							cursor: pointer;
+							color: $primary-color;
+						}
+					}
+				}
+			}
+		}
 	}
 }
