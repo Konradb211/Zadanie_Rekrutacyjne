@@ -1,2 +1,2 @@
 # Zadanie_Rekrutacyjne 
-https://jocular-clafoutis-8484fd.netlify.app/
+zadanie zhostowane na netlify: https://jocular-clafoutis-8484fd.netlify.app/
